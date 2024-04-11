@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#114364"
+    >
+
+    <!--Botões a esquerda do menu-->
+    <Button
+        android:id="@+id/btn_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        style="@style/BotaoEstilo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_historico"
+        app:layout_constraintWidth_percent="0.25"
+        />
+
+    <Button
+        android:id="@+id/btn_historico"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Historico"
+        style="@style/BotaoEstilo"
+        app:layout_constraintStart_toEndOf="@+id/btn_home"
+        app:layout_constraintEnd_toStartOf="@+id/btn_conquistas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.25"
+        />
+
+    <!--Botões da direita do menu-->
+    <Button
+        android:id="@+id/btn_conquistas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Conquistas"
+        style="@style/BotaoEstilo"
+        app:layout_constraintEnd_toStartOf="@+id/btn_perfil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.25"
+        />
+
+    <Button
+        android:id="@+id/btn_perfil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Perfil"
+        style="@style/BotaoEstilo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.25"
+        />
+
+    <!--Botão Flutuante Central do menu-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_historico"
+        app:layout_constraintStart_toEndOf="@+id/btn_historico"
+        app:layout_constraintEnd_toStartOf="@id/btn_conquistas"
+        >
+
+        <TextView
+            android:id="@+id/texto_btn_flutuante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_floatinAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_shape"
+            android:contentDescription="Adicionar"
+            app:layout_constraintTop_toTopOf="@+id/texto_btn_flutuante"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
